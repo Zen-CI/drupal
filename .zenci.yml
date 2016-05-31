@@ -12,3 +12,4 @@ deploy:
       database_user: zen_production
     scripts:
       init: '{home}/scripts/drupal_install.sh'
+      after: '{home}/scripts/drupal_updb.sh'
