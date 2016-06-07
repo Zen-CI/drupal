@@ -1,0 +1,18 @@
+deploy:
+  deploy:
+    server: d7.zenci.drupal-site.net
+    username: zenci
+    dir: '{home}/github/{repo_owner}/{repo_name}/{branch}'
+    env_vars:
+      domain_name: 'd7.zenci.drupal-site.net'
+      docroot: '{home}/domains/d7.zenci.drupal-site.net'
+      database_name: zenci_drupal
+      database_user: zenci_drupal
+      database_pass: DBPASSWORD
+      account_user: admin
+      account_mail: admin@zen.ci
+      account_pass: changeme
+      site_mail: noreply@zen.ci
+      site_name: "My Test deploy"
+    scripts:
+      init: '{deploy_dir}/install.sh'
